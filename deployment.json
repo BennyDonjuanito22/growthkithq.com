@@ -13,8 +13,11 @@
     "checkout.html",
     "index.html",
     "offer.html",
+    "privacy.html",
+    "refunds.html",
     "review-assets.json",
     "styles.css",
+    "terms.html",
     "thank-you.html"
   ]
 }
