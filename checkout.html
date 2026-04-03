@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Growth Toolkit | Checkout</title>
+  <meta name="description" content="Digital bundles, landing pages, checkout, and affiliate surfaces should all feel like one tight operator-grade toolkit." />
+  <meta property="og:title" content="AI Growth Toolkit | Checkout" />
+  <meta property="og:description" content="Digital bundles, landing pages, checkout, and affiliate surfaces should all feel like one tight operator-grade toolkit." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://growthkithq.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark"></span>
+        <span class="brand-copy">
+          <strong>AI Growth Toolkit</strong>
+        </span>
+      </a>
+      <nav class="nav">
+        <a class='button ghost' href='index.html'>Home</a>
+        <a class='button ghost' href='offer.html'>Pricing</a>
+        <a class='button ghost' href='channels.html'>About</a>
+      </nav>
+    </header>
+    
+    <section class="hero">
+      <article class="hero-card">
+        <div class="eyebrow">Secure Checkout</div>
+        <h1>Complete Your Purchase</h1>
+        <p>Select a plan below to proceed to secure payment. All transactions are processed through Stripe &mdash; your card details never touch our servers.</p>
+      </article>
+      <aside class="hero-card">
+        <h2>Purchase Info</h2>
+        <ul>
+          <li><strong>Secure payment</strong> via Stripe (PCI-DSS compliant)</li>
+          <li><strong>Instant access</strong> &mdash; delivery details on the confirmation page</li>
+          <li><strong>Support:</strong> <a href="mailto:support@growthkithq.com">support@growthkithq.com</a></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="panel" style="margin-top:24px;">
+      <h2>Choose Your Plan</h2>
+      <div class="offer-grid" style="margin-top:18px;" id="checkout-tiers">
+        
+        <article class="offer-card checkout-tier" data-business="b1" data-tier="0" data-price="3700">
+          <h3>Starter Toolkit</h3>
+          <div class="price">$37</div>
+          <p>Core prompts, SOPs, and launch checklist for fast operator deployment.</p>
+          <ul><li>Prompt pack</li><li>Operator SOPs</li><li>Launch checklist</li></ul>
+          <div class="actions">
+            <button class="button primary buy-btn" data-tier="0">Buy Now</button>
+          </div>
+        </article>
+        <article class="offer-card checkout-tier" data-business="b1" data-tier="1" data-price="6700">
+          <h3>Complete Toolkit</h3>
+          <div class="price">$67</div>
+          <p>Full template stack for content, funnels, offers, and automation handoff.</p>
+          <ul><li>Template library</li><li>Prompt vault</li><li>Automation blueprints</li></ul>
+          <div class="actions">
+            <button class="button primary buy-btn" data-tier="1">Buy Now</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div id="checkout-status" style="display:none; margin-top:18px;" class="panel">
+      <p id="checkout-message" style="text-align:center; font-weight:600;">Processing...</p>
+    </div>
+
+    <section class="panel" style="margin-top:24px;">
+      <h2>Refund &amp; Support Policy</h2>
+      <ul>
+        <li>14-day refund window from date of purchase for digital products.</li>
+        <li>Service deliverables are scoped and non-refundable once work begins.</li>
+        <li>Contact <a href="mailto:support@growthkithq.com">support@growthkithq.com</a> for any questions.</li>
+      </ul>
+    </section>
+    
+    <footer class="site-footer">
+      <div class="footer-note">&copy; 2026 AI Growth Toolkit. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./offer.html">Pricing</a>
+        <a href="./channels.html">About</a>
+        <a href='mailto:support@growthkithq.com'>Contact</a>
+      </div>
+    </footer>
+  </main>
+  
+  <script src="../asi-config.js"></script>
+  <script>
+  (function() {
+    'use strict';
+    var API_BASE = window.ASI_API_BASE || '';
+    var BUSINESS_ID = 'b1';
+    var TIERS = [{"name": "Starter Toolkit", "price_cents": 3700, "price_display": "$37"}, {"name": "Complete Toolkit", "price_cents": 6700, "price_display": "$67"}];
+    var THANK_YOU_URL = window.location.href.replace('checkout.html', 'thank-you.html');
+    var CANCEL_URL = window.location.href;
+
+    var buttons = document.querySelectorAll('.buy-btn');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function(e) {
+        var tierIndex = parseInt(e.target.getAttribute('data-tier'), 10);
+        var tier = TIERS[tierIndex];
+        if (!tier) return;
+        startCheckout(tier, tierIndex);
+      });
+    }
+
+    function showStatus(msg, isError) {
+      var el = document.getElementById('checkout-status');
+      var msgEl = document.getElementById('checkout-message');
+      el.style.display = 'block';
+      msgEl.textContent = msg;
+      msgEl.style.color = isError ? '#c00' : 'inherit';
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function startCheckout(tier, tierIndex) {
+      var btns = document.querySelectorAll('.buy-btn');
+      for (var j = 0; j < btns.length; j++) btns[j].disabled = true;
+      showStatus('Redirecting to secure checkout...', false);
+
+      var payload = {
+        business_id: BUSINESS_ID,
+        tier_index: tierIndex,
+        tier_name: tier.name,
+        price_cents: tier.price_cents,
+        success_url: THANK_YOU_URL + '?session_id={CHECKOUT_SESSION_ID}&tier=' + encodeURIComponent(tier.name),
+        cancel_url: CANCEL_URL
+      };
+
+      fetch(API_BASE + '/stripe/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.url) {
+          window.location.href = data.url;
+        } else if (data.sessionId && window.Stripe) {
+          window.Stripe(data.publishableKey || '').redirectToCheckout({ sessionId: data.sessionId });
+        } else {
+          showStatus('Unable to start checkout: ' + (data.error || 'Unknown error'), true);
+        }
+      })
+      .catch(function() {
+        showStatus('Connection error. Please check your internet and try again.', true);
+      })
+      .finally(function() {
+        var btns = document.querySelectorAll('.buy-btn');
+        for (var j = 0; j < btns.length; j++) btns[j].disabled = false;
+      });
+    }
+  })();
+  </script>
+</body>
+</html>
