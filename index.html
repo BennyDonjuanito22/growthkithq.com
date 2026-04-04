@@ -16,6 +16,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "AI Growth Toolkit",
+  "description": "Ready-to-use AI templates, prompts, SOPs, and automation bundles for solopreneurs and small teams.",
+  "url": "https://growthkithq.com",
+  "email": "support@growthkithq.com"
+}
+</script>
+<link rel="canonical" href="https://growthkithq.com/">
 </head>
 <body data-business-id="b1">
   <header class="site-header">
@@ -175,6 +186,18 @@
       <a href="./offer.html" class="btn btn-primary">Get the Toolkit</a>
     </div>
   </section>
+  
+  <!-- Lead Capture -->
+  <section class="lead-capture" id="free-resource">
+    <h3>🎁 Free: 10 ChatGPT Prompts That Made Me $10K</h3>
+    <p>Get our 10 highest-converting ChatGPT prompts — free instant download.</p>
+    <form action="#" method="POST" id="lead-form">
+      <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
+      <button type="submit">Get Free Access</button>
+      <p class="privacy-note">No spam. Unsubscribe anytime. We respect your privacy.</p>
+    </form>
+  </section>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
@@ -194,5 +217,27 @@
     if(window.ASI_ANALYTICS_URL){try{navigator.sendBeacon(window.ASI_ANALYTICS_URL,JSON.stringify({business_id:bid,page:page,referrer:document.referrer||'direct',timestamp:new Date().toISOString(),ua:navigator.userAgent}));}catch(e){}}
   })();
   </script>
+
+<script>
+// Lead capture — stores submissions locally until email service is connected
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('lead-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var email = form.querySelector('input[type="email"]').value;
+      if (!email) return;
+      // Store locally (will be replaced with real email API endpoint)
+      var leads = JSON.parse(localStorage.getItem('asi_leads') || '[]');
+      leads.push({ email: email, timestamp: new Date().toISOString(), source: window.location.hostname });
+      localStorage.setItem('asi_leads', JSON.stringify(leads));
+      // Show success
+      var section = form.closest('.lead-capture');
+      section.innerHTML = '<h3>✅ You\'re in!</h3><p>Check your inbox for your free resource.</p>';
+    });
+  }
+});
+</script>
+
 </body>
 </html>

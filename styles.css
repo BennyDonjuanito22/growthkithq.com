@@ -174,3 +174,58 @@ img{max-width:100%;height:auto;}
   .nav-links a{padding:6px 10px;font-size:13px;}
   .footer-content{flex-direction:column;text-align:center;}
 }
+
+/* ── Lead Capture ── */
+.lead-capture {
+  background: var(--surface, #f8f9fa);
+  border: 2px solid var(--primary, #2563eb);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 540px;
+  text-align: center;
+}
+.lead-capture h3 {
+  font-family: var(--display, sans-serif);
+  color: var(--ink, #1a1a2e);
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+.lead-capture p {
+  color: var(--ink, #333);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+.lead-capture form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+.lead-capture input[type="email"] {
+  width: 100%;
+  max-width: 360px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.lead-capture button {
+  background: var(--primary, #2563eb);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.lead-capture button:hover {
+  opacity: 0.9;
+}
+.lead-capture .privacy-note {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
