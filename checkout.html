@@ -1,17 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI Growth Toolkit | Checkout</title>
-  <meta name="description" content="Digital bundles, landing pages, checkout, and affiliate surfaces should all feel like one tight operator-grade toolkit." />
-  <meta property="og:title" content="AI Growth Toolkit | Checkout" />
-  <meta property="og:description" content="Digital bundles, landing pages, checkout, and affiliate surfaces should all feel like one tight operator-grade toolkit." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://growthkithq.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
-  
 </head>
 <body>
   <main class="page">
@@ -20,26 +14,29 @@
         <span class="brand-mark"></span>
         <span class="brand-copy">
           <strong>AI Growth Toolkit</strong>
+          <span>Rocket toolkit mark with an upward-arrow monogram.</span>
         </span>
       </a>
       <nav class="nav">
-        <a class='button ghost' href='index.html'>Home</a>
-        <a class='button ghost' href='offer.html'>Pricing</a>
-        <a class='button ghost' href='channels.html'>About</a>
+        <a class="button ghost" href="index.html">Home</a>
+        <a class="button ghost" href="offer.html">Offer</a>
+        <a class="button primary" href="checkout.html">Checkout</a>
+        <a class="button ghost" href="channels.html">Channels</a>
+        <a class="button ghost" href="thank-you.html">Thank You</a>
       </nav>
     </header>
-    
+
     <section class="hero">
       <article class="hero-card">
         <div class="eyebrow">Secure Checkout</div>
         <h1>Complete Your Purchase</h1>
-        <p>Select a plan below to proceed to secure payment. All transactions are processed through Stripe &mdash; your card details never touch our servers.</p>
+        <p>Select a plan below to proceed to secure payment. All transactions are processed through Stripe — your card details never touch our servers.</p>
       </article>
       <aside class="hero-card">
         <h2>Purchase Info</h2>
         <ul>
           <li><strong>Secure payment</strong> via Stripe (PCI-DSS compliant)</li>
-          <li><strong>Instant access</strong> &mdash; delivery details on the confirmation page</li>
+          <li><strong>Instant access</strong> — delivery details on the thank-you page</li>
           <li><strong>Support:</strong> <a href="mailto:support@growthkithq.com">support@growthkithq.com</a></li>
         </ul>
       </aside>
@@ -48,12 +45,15 @@
     <section class="panel" style="margin-top:24px;">
       <h2>Choose Your Plan</h2>
       <div class="offer-grid" style="margin-top:18px;" id="checkout-tiers">
-        
         <article class="offer-card checkout-tier" data-business="b1" data-tier="0" data-price="3700">
           <h3>Starter Toolkit</h3>
           <div class="price">$37</div>
           <p>Core prompts, SOPs, and launch checklist for fast operator deployment.</p>
-          <ul><li>Prompt pack</li><li>Operator SOPs</li><li>Launch checklist</li></ul>
+          <ul>
+            <li>Prompt pack</li>
+            <li>Operator SOPs</li>
+            <li>Launch checklist</li>
+          </ul>
           <div class="actions">
             <button class="button primary buy-btn" data-tier="0">Buy Now</button>
           </div>
@@ -62,7 +62,11 @@
           <h3>Complete Toolkit</h3>
           <div class="price">$67</div>
           <p>Full template stack for content, funnels, offers, and automation handoff.</p>
-          <ul><li>Template library</li><li>Prompt vault</li><li>Automation blueprints</li></ul>
+          <ul>
+            <li>Template library</li>
+            <li>Prompt vault</li>
+            <li>Automation blueprints</li>
+          </ul>
           <div class="actions">
             <button class="button primary buy-btn" data-tier="1">Buy Now</button>
           </div>
@@ -82,33 +86,22 @@
         <li>Contact <a href="mailto:support@growthkithq.com">support@growthkithq.com</a> for any questions.</li>
       </ul>
     </section>
-    
-    <footer class="site-footer">
-      <div class="footer-note">&copy; 2026 AI Growth Toolkit. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="./index.html">Home</a>
-        <a href="./offer.html">Pricing</a>
-        <a href="./channels.html">About</a>
-        <a href='mailto:support@growthkithq.com'>Contact</a>
-      </div>
-      <div class="footer-links" style="margin-top:8px;">
-        <a href="./privacy.html">Privacy</a>
-        <a href="./terms.html">Terms</a>
-        <a href="./refunds.html">Refunds</a>
-      </div>
-    </footer>
+
+    <div class="footer-note">&copy; AI Growth Toolkit. Payments processed securely by Stripe.</div>
   </main>
-  
-  <script src="../asi-config.js"></script>
+
   <script>
   (function() {
     'use strict';
+
+    // --- Configuration ---
     var API_BASE = window.ASI_API_BASE || '';
     var BUSINESS_ID = 'b1';
     var TIERS = [{"name": "Starter Toolkit", "price_cents": 3700, "price_display": "$37"}, {"name": "Complete Toolkit", "price_cents": 6700, "price_display": "$67"}];
     var THANK_YOU_URL = window.location.href.replace('checkout.html', 'thank-you.html');
     var CANCEL_URL = window.location.href;
 
+    // --- Buy button handlers ---
     var buttons = document.querySelectorAll('.buy-btn');
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].addEventListener('click', function(e) {
@@ -129,8 +122,10 @@
     }
 
     function startCheckout(tier, tierIndex) {
+      // Disable all buttons
       var btns = document.querySelectorAll('.buy-btn');
       for (var j = 0; j < btns.length; j++) btns[j].disabled = true;
+
       showStatus('Redirecting to secure checkout...', false);
 
       var payload = {
@@ -151,19 +146,57 @@
       .then(function(data) {
         if (data.url) {
           window.location.href = data.url;
-        } else if (data.sessionId && window.Stripe) {
-          window.Stripe(data.publishableKey || '').redirectToCheckout({ sessionId: data.sessionId });
+        } else if (data.sessionId) {
+          // Fallback: use Stripe.js redirect
+          if (window.Stripe) {
+            var stripe = window.Stripe(data.publishableKey || '');
+            stripe.redirectToCheckout({ sessionId: data.sessionId });
+          } else {
+            showStatus('Payment system loading. Please try again.', true);
+          }
         } else {
           showStatus('Unable to start checkout: ' + (data.error || 'Unknown error'), true);
         }
       })
-      .catch(function() {
+      .catch(function(err) {
         showStatus('Connection error. Please check your internet and try again.', true);
       })
       .finally(function() {
         var btns = document.querySelectorAll('.buy-btn');
         for (var j = 0; j < btns.length; j++) btns[j].disabled = false;
       });
+    }
+  })();
+  </script>
+
+  <!-- ASI Analytics (lightweight, privacy-friendly) -->
+  <script>
+  (function(){
+    var bid = document.body.getAttribute('data-business-id') || 'unknown';
+    var page = location.pathname.split('/').pop() || 'index.html';
+    var key = 'asi_pv_' + bid;
+    try {
+      var data = JSON.parse(localStorage.getItem(key) || '{}');
+      data[page] = (data[page] || 0) + 1;
+      data._total = (data._total || 0) + 1;
+      data._last = new Date().toISOString();
+      data._ref = document.referrer || 'direct';
+      localStorage.setItem(key, JSON.stringify(data));
+    } catch(e) {}
+    // Beacon to analytics endpoint if configured
+    if (window.ASI_ANALYTICS_URL) {
+      var payload = JSON.stringify({
+        business_id: bid,
+        page: page,
+        referrer: document.referrer || 'direct',
+        timestamp: new Date().toISOString(),
+        ua: navigator.userAgent
+      });
+      try {
+        navigator.sendBeacon(window.ASI_ANALYTICS_URL, payload);
+      } catch(e) {
+        // Silent fail — analytics should never break the site
+      }
     }
   })();
   </script>

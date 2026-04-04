@@ -1,17 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI Growth Toolkit | Thank You</title>
-  <meta name="description" content="Digital bundles, landing pages, checkout, and affiliate surfaces should all feel like one tight operator-grade toolkit." />
-  <meta property="og:title" content="AI Growth Toolkit | Thank You" />
-  <meta property="og:description" content="Digital bundles, landing pages, checkout, and affiliate surfaces should all feel like one tight operator-grade toolkit." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://growthkithq.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
-  
 </head>
 <body>
   <main class="page">
@@ -20,58 +14,85 @@
         <span class="brand-mark"></span>
         <span class="brand-copy">
           <strong>AI Growth Toolkit</strong>
+          <span>Rocket toolkit mark with an upward-arrow monogram.</span>
         </span>
       </a>
       <nav class="nav">
         <a class='button ghost' href='index.html'>Home</a>
-        <a class='button ghost' href='offer.html'>Pricing</a>
-        <a class='button ghost' href='channels.html'>About</a>
+        <a class='button ghost' href='offer.html'>Offer</a>
+        <a class='button ghost' href='checkout.html'>Checkout</a>
+        <a class='button ghost' href='channels.html'>Channels</a>
+        <a class='button primary' href='thank-you.html'>Thank You</a>
       </nav>
     </header>
     
     <section class="hero">
       <article class="hero-card">
-        <div class="eyebrow">Thank You!</div>
-        <h1>Your purchase is confirmed.</h1>
-        <p>Thank you for choosing AI Growth Toolkit. Your order has been received and you&rsquo;ll get an email with your delivery details shortly.</p>
+        <div class="eyebrow">Thank-You Page</div>
+        <h1>Post-Purchase and Next-Step Flow</h1>
+        <p>The thank-you experience should feel like a clean continuation of the brand, not a generic dead-end receipt screen.</p>
         <div class="actions">
-          <a class="button primary" href="./index.html">Back to Home</a>
-          <a class="button ghost" href="./offer.html">View More Products</a>
+          <a class="button primary" href="./channels.html">Review Channel Follow-Up</a>
+          <a class="button ghost" href="./checkout.html">Back to Checkout Preview</a>
         </div>
       </article>
       <aside class="hero-card">
-        <h2>What Happens Next</h2>
+        <h2>Immediate Next Steps</h2>
         <ul>
-          <li><strong>Check your email</strong> for order confirmation and delivery details.</li>
-          <li><strong>Access your purchase</strong> via the link in your confirmation email.</li>
-          <li><strong>Need help?</strong> Contact us at <a href="mailto:support@growthkithq.com">support@growthkithq.com</a></li>
+          <li>Reassure the buyer what they purchased and what happens next.</li>
+          <li>Offer one tightly related follow-on only if it increases usefulness.</li>
+          <li>Route support, delivery, or onboarding links without adding clutter.</li>
         </ul>
       </aside>
     </section>
-    <section class="panel" style="margin-top:24px;">
-      <h2>Support &amp; Refunds</h2>
-      <ul>
-        <li>14-day refund window from date of purchase for digital products.</li>
-        <li>For questions or issues, email <a href="mailto:support@growthkithq.com">support@growthkithq.com</a>.</li>
-        <li>We typically respond within 24 hours.</li>
-      </ul>
+    <section class="grid-two" style="margin-top:24px;">
+      <section class="panel">
+        <h2>Brand Continuity</h2>
+        <ul>
+          <li>Technical Crisp remains in use.</li>
+          <li>Typography stays on Poppins, Inter, and Space Grotesk.</li>
+          <li>Palette continuity preserves recognition across email, checkout, and support.</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>Guardrails</h2>
+        <ul><li>No cyberpunk dark-mode drift.</li><li>No generic AI hype claims.</li><li>Do not hide pricing or bundle scope.</li></ul>
+      </section>
     </section>
     
-    <footer class="site-footer">
-      <div class="footer-note">&copy; 2026 AI Growth Toolkit. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="./index.html">Home</a>
-        <a href="./offer.html">Pricing</a>
-        <a href="./channels.html">About</a>
-        <a href='mailto:support@growthkithq.com'>Contact</a>
-      </div>
-      <div class="footer-links" style="margin-top:8px;">
-        <a href="./privacy.html">Privacy</a>
-        <a href="./terms.html">Terms</a>
-        <a href="./refunds.html">Refunds</a>
-      </div>
-    </footer>
+    <div class="footer-note">Local deployment pack for AI Growth Toolkit. No launch without approval.</div>
   </main>
-  
+
+  <!-- ASI Analytics (lightweight, privacy-friendly) -->
+  <script>
+  (function(){
+    var bid = document.body.getAttribute('data-business-id') || 'unknown';
+    var page = location.pathname.split('/').pop() || 'index.html';
+    var key = 'asi_pv_' + bid;
+    try {
+      var data = JSON.parse(localStorage.getItem(key) || '{}');
+      data[page] = (data[page] || 0) + 1;
+      data._total = (data._total || 0) + 1;
+      data._last = new Date().toISOString();
+      data._ref = document.referrer || 'direct';
+      localStorage.setItem(key, JSON.stringify(data));
+    } catch(e) {}
+    // Beacon to analytics endpoint if configured
+    if (window.ASI_ANALYTICS_URL) {
+      var payload = JSON.stringify({
+        business_id: bid,
+        page: page,
+        referrer: document.referrer || 'direct',
+        timestamp: new Date().toISOString(),
+        ua: navigator.userAgent
+      });
+      try {
+        navigator.sendBeacon(window.ASI_ANALYTICS_URL, payload);
+      } catch(e) {
+        // Silent fail — analytics should never break the site
+      }
+    }
+  })();
+  </script>
 </body>
 </html>
