@@ -1,203 +1,155 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Growth Toolkit | Checkout</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Started | AI Growth Toolkit</title>
+  <meta name="description" content="Get the exact templates, prompts, and standard operating procedures that operators use to build and scale AI-powered businesses. Skip months of setup — deploy in days.">
+  <meta property="og:title" content="Get Started | AI Growth Toolkit">
+  <meta property="og:description" content="Get the exact templates, prompts, and standard operating procedures that operators use to build and scale AI-powered businesses. Skip months of setup — deploy in days.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://growthkithq.com/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Get Started | AI Growth Toolkit">
+  <meta name="twitter:description" content="Get the exact templates, prompts, and standard operating procedures that operators use to build and scale AI-powered businesses. Skip months of setup — deploy in days.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
-  <main class="page">
-    <header class="header">
-      <a class="brand" href="./index.html">
-        <span class="brand-mark"></span>
-        <span class="brand-copy">
-          <strong>AI Growth Toolkit</strong>
-          <span>Rocket toolkit mark with an upward-arrow monogram.</span>
-        </span>
-      </a>
-      <nav class="nav">
-        <a class="button ghost" href="index.html">Home</a>
-        <a class="button ghost" href="offer.html">Offer</a>
-        <a class="button primary" href="checkout.html">Checkout</a>
-        <a class="button ghost" href="channels.html">Channels</a>
-        <a class="button ghost" href="thank-you.html">Thank You</a>
+<body data-business-id="b1">
+  <header class="site-header">
+    <div class="container">
+      <a href="./index.html" class="logo"><span>A</span>I Growth Toolkit</a>
+      <nav class="nav-links">
+    <a href="./index.html">Home</a>
+    <a href="./offer.html">Services</a>
+    <a href="./checkout.html" class="active">Get Started</a>
       </nav>
-    </header>
-
-    <section class="hero">
-      <article class="hero-card">
-        <div class="eyebrow">Secure Checkout</div>
-        <h1>Complete Your Purchase</h1>
-        <p>Select a plan below to proceed to secure payment. All transactions are processed through Stripe — your card details never touch our servers.</p>
-      </article>
-      <aside class="hero-card">
-        <h2>Purchase Info</h2>
-        <ul>
-          <li><strong>Secure payment</strong> via Stripe (PCI-DSS compliant)</li>
-          <li><strong>Instant access</strong> — delivery details on the thank-you page</li>
-          <li><strong>Support:</strong> <a href="mailto:support@growthkithq.com">support@growthkithq.com</a></li>
-        </ul>
-      </aside>
-    </section>
-
-    <section class="panel" style="margin-top:24px;">
-      <h2>Choose Your Plan</h2>
-      <div class="offer-grid" style="margin-top:18px;" id="checkout-tiers">
-        <article class="offer-card checkout-tier" data-business="b1" data-tier="0" data-price="3700">
-          <h3>Starter Toolkit</h3>
-          <div class="price">$37</div>
-          <p>Core prompts, SOPs, and launch checklist for fast operator deployment.</p>
-          <ul>
-            <li>Prompt pack</li>
-            <li>Operator SOPs</li>
-            <li>Launch checklist</li>
-          </ul>
-          <div class="actions">
-            <button class="button primary buy-btn" data-tier="0">Buy Now</button>
-          </div>
-        </article>
-        <article class="offer-card checkout-tier" data-business="b1" data-tier="1" data-price="6700">
-          <h3>Complete Toolkit</h3>
-          <div class="price">$67</div>
-          <p>Full template stack for content, funnels, offers, and automation handoff.</p>
-          <ul>
-            <li>Template library</li>
-            <li>Prompt vault</li>
-            <li>Automation blueprints</li>
-          </ul>
-          <div class="actions">
-            <button class="button primary buy-btn" data-tier="1">Buy Now</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <div id="checkout-status" style="display:none; margin-top:18px;" class="panel">
-      <p id="checkout-message" style="text-align:center; font-weight:600;">Processing...</p>
     </div>
+  </header>
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Secure Checkout</div>
+        <h1>Complete Your Purchase</h1>
+        <p>Select a plan below to proceed. All transactions are processed securely through Stripe.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Choose Your Plan</h2>
+      <div class="offers-grid" id="checkout-tiers">
+        <div class="offer-card" data-business="b1" data-tier="0" data-price="3700">
+          <h3>Starter Toolkit</h3>
+          <div class="offer-price">$37</div>
+          <p>Essential prompts, SOPs, and a step-by-step launch checklist to get your first offer live.</p>
+          <ul>
+          <li>50+ AI prompts for content &amp; copy</li>
+          <li>Operator SOP templates</li>
+          <li>Launch-day checklist</li>
+          <li>Email sequence templates</li>
+          </ul>
+          <button class="btn btn-primary buy-btn" data-tier="0" style="width:100%;cursor:pointer;">Buy Now</button>
+        </div>
+        <div class="offer-card featured" data-business="b1" data-tier="1" data-price="6700">
+          <h3>Complete Toolkit</h3>
+          <div class="offer-price">$67</div>
+          <p>Everything in Starter plus full funnel templates, automation blueprints, and a swipe file vault.</p>
+          <ul>
+          <li>Everything in Starter</li>
+          <li>Funnel page templates</li>
+          <li>Automation workflow blueprints</li>
+          <li>Landing page swipe files</li>
+          <li>Content calendar system</li>
+          </ul>
+          <button class="btn btn-primary buy-btn" data-tier="1" style="width:100%;cursor:pointer;">Buy Now</button>
+        </div>
+        <div class="offer-card" data-business="b1" data-tier="2" data-price="19700">
+          <h3>Implementation Support</h3>
+          <div class="offer-price">From $197</div>
+          <p>1-on-1 implementation review after purchasing the toolkit. We walk through your setup and optimize.</p>
+          <ul>
+          <li>90-minute strategy session</li>
+          <li>Setup audit &amp; recommendations</li>
+          <li>Custom prompt tuning</li>
+          <li>30-day email support</li>
+          </ul>
+          <button class="btn btn-primary buy-btn" data-tier="2" style="width:100%;cursor:pointer;">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="panel" style="margin-top:24px;">
-      <h2>Refund &amp; Support Policy</h2>
-      <ul>
-        <li>14-day refund window from date of purchase for digital products.</li>
-        <li>Service deliverables are scoped and non-refundable once work begins.</li>
-        <li>Contact <a href="mailto:support@growthkithq.com">support@growthkithq.com</a> for any questions.</li>
-      </ul>
-    </section>
+  <div id="checkout-status" style="display:none;" class="section">
+    <div class="container">
+      <p id="checkout-message" style="text-align:center;font-weight:600;">Processing...</p>
+    </div>
+  </div>
 
-    <div class="footer-note">&copy; AI Growth Toolkit. Payments processed securely by Stripe.</div>
-  </main>
-
-  <script>
-  (function() {
-    'use strict';
-
-    // --- Configuration ---
-    var API_BASE = window.ASI_API_BASE || '';
-    var BUSINESS_ID = 'b1';
-    var TIERS = [{"name": "Starter Toolkit", "price_cents": 3700, "price_display": "$37"}, {"name": "Complete Toolkit", "price_cents": 6700, "price_display": "$67"}];
-    var THANK_YOU_URL = window.location.href.replace('checkout.html', 'thank-you.html');
-    var CANCEL_URL = window.location.href;
-
-    // --- Buy button handlers ---
-    var buttons = document.querySelectorAll('.buy-btn');
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener('click', function(e) {
-        var tierIndex = parseInt(e.target.getAttribute('data-tier'), 10);
-        var tier = TIERS[tierIndex];
-        if (!tier) return;
-        startCheckout(tier, tierIndex);
-      });
-    }
-
-    function showStatus(msg, isError) {
-      var el = document.getElementById('checkout-status');
-      var msgEl = document.getElementById('checkout-message');
-      el.style.display = 'block';
-      msgEl.textContent = msg;
-      msgEl.style.color = isError ? '#c00' : 'inherit';
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function startCheckout(tier, tierIndex) {
-      // Disable all buttons
-      var btns = document.querySelectorAll('.buy-btn');
-      for (var j = 0; j < btns.length; j++) btns[j].disabled = true;
-
-      showStatus('Redirecting to secure checkout...', false);
-
-      var payload = {
-        business_id: BUSINESS_ID,
-        tier_index: tierIndex,
-        tier_name: tier.name,
-        price_cents: tier.price_cents,
-        success_url: THANK_YOU_URL + '?session_id={CHECKOUT_SESSION_ID}&tier=' + encodeURIComponent(tier.name),
-        cancel_url: CANCEL_URL
-      };
-
-      fetch(API_BASE + '/stripe/create-checkout-session', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
-      .then(function(res) { return res.json(); })
-      .then(function(data) {
-        if (data.url) {
-          window.location.href = data.url;
-        } else if (data.sessionId) {
-          // Fallback: use Stripe.js redirect
-          if (window.Stripe) {
-            var stripe = window.Stripe(data.publishableKey || '');
-            stripe.redirectToCheckout({ sessionId: data.sessionId });
-          } else {
-            showStatus('Payment system loading. Please try again.', true);
-          }
-        } else {
-          showStatus('Unable to start checkout: ' + (data.error || 'Unknown error'), true);
-        }
-      })
-      .catch(function(err) {
-        showStatus('Connection error. Please check your internet and try again.', true);
-      })
-      .finally(function() {
-        var btns = document.querySelectorAll('.buy-btn');
-        for (var j = 0; j < btns.length; j++) btns[j].disabled = false;
-      });
-    }
-  })();
-  </script>
-
-  <!-- ASI Analytics (lightweight, privacy-friendly) -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Purchase Information</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Secure Payment</h3>
+          <p>All transactions processed through Stripe (PCI-DSS Level 1 compliant). Your card details never touch our servers.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Instant Access</h3>
+          <p>Digital products are delivered instantly after payment. Service engagements begin within 24 hours.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Satisfaction Guarantee</h3>
+          <p>14-day refund policy on digital products. Contact <a href="mailto:support@growthkithq.com">support@growthkithq.com</a> for support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2026 AI Growth Toolkit. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="mailto:support@growthkithq.com">Contact</a>
+          <a href="./offer.html">Services</a>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script>
   (function(){
-    var bid = document.body.getAttribute('data-business-id') || 'unknown';
-    var page = location.pathname.split('/').pop() || 'index.html';
-    var key = 'asi_pv_' + bid;
-    try {
-      var data = JSON.parse(localStorage.getItem(key) || '{}');
-      data[page] = (data[page] || 0) + 1;
-      data._total = (data._total || 0) + 1;
-      data._last = new Date().toISOString();
-      data._ref = document.referrer || 'direct';
-      localStorage.setItem(key, JSON.stringify(data));
-    } catch(e) {}
-    // Beacon to analytics endpoint if configured
-    if (window.ASI_ANALYTICS_URL) {
-      var payload = JSON.stringify({
-        business_id: bid,
-        page: page,
-        referrer: document.referrer || 'direct',
-        timestamp: new Date().toISOString(),
-        ua: navigator.userAgent
+    'use strict';
+    var API_BASE=window.ASI_API_BASE||'';
+    var BUSINESS_ID='b1';
+    var TIERS=[{"name": "Starter Toolkit", "price_cents": 3700, "price_display": "$37"}, {"name": "Complete Toolkit", "price_cents": 6700, "price_display": "$67"}, {"name": "Implementation Support", "price_cents": 19700, "price_display": "From $197"}];
+    document.querySelectorAll('.buy-btn').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var tier=parseInt(this.dataset.tier,10);
+        var info=TIERS[tier];
+        if(!info)return;
+        var statusEl=document.getElementById('checkout-status');
+        var msgEl=document.getElementById('checkout-message');
+        statusEl.style.display='block';
+        msgEl.textContent='Redirecting to secure checkout...';
+        if(!API_BASE){msgEl.textContent='Checkout is being configured. Please contact '+'support@growthkithq.com'+' to complete your purchase.';return;}
+        fetch(API_BASE+'/stripe/create-checkout-session',{
+          method:'POST',headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({business_id:BUSINESS_ID,tier:tier,product_name:info.name,amount:info.price_cents})
+        }).then(function(r){return r.json();}).then(function(d){
+          if(d.url)window.location.href=d.url;else msgEl.textContent=d.error||'Checkout unavailable. Contact support.';
+        }).catch(function(){msgEl.textContent='Checkout unavailable. Please contact support.';});
       });
-      try {
-        navigator.sendBeacon(window.ASI_ANALYTICS_URL, payload);
-      } catch(e) {
-        // Silent fail — analytics should never break the site
-      }
-    }
+    });
+  })();
+  </script>
+  <script>
+  (function(){
+    var bid='b1',page=location.pathname.split('/').pop()||'index.html';
+    var key='asi_pv_'+bid;
+    try{var d=JSON.parse(localStorage.getItem(key)||'{}');d[page]=(d[page]||0)+1;d._total=(d._total||0)+1;d._last=new Date().toISOString();d._ref=document.referrer||'direct';localStorage.setItem(key,JSON.stringify(d));}catch(e){}
+    if(window.ASI_ANALYTICS_URL){try{navigator.sendBeacon(window.ASI_ANALYTICS_URL,JSON.stringify({business_id:bid,page:page,referrer:document.referrer||'direct',timestamp:new Date().toISOString(),ua:navigator.userAgent}));}catch(e){}}
   })();
   </script>
 </body>
