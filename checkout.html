@@ -1,156 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Get Started | AI Growth Toolkit</title>
-  <meta name="description" content="Get the exact templates, prompts, and standard operating procedures that operators use to build and scale AI-powered businesses. Skip months of setup — deploy in days.">
-  <meta property="og:title" content="Get Started | AI Growth Toolkit">
-  <meta property="og:description" content="Get the exact templates, prompts, and standard operating procedures that operators use to build and scale AI-powered businesses. Skip months of setup — deploy in days.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://growthkithq.com/">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Get Started | AI Growth Toolkit">
-  <meta name="twitter:description" content="Get the exact templates, prompts, and standard operating procedures that operators use to build and scale AI-powered businesses. Skip months of setup — deploy in days.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Growth Toolkit — Checkout</title>
+<meta name="description" content="Choose your AI Growth Toolkit tier and check out securely via Stripe.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fafafa;color:#1a202c;line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding:3rem 1.5rem}
+.brand{font-size:1.25rem;font-weight:700;margin-bottom:2rem;text-align:center}
+.brand a{color:inherit;text-decoration:none}
+h1.head{font-size:2rem;text-align:center;margin-bottom:0.5rem;font-family:'Poppins',sans-serif}
+.subtitle{text-align:center;color:#4a5568;margin-bottom:2rem;font-size:1.1rem}
+.pricing-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:stretch;margin-bottom:2rem}
+.tier{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:32px 24px;display:flex;flex-direction:column;position:relative;transition:transform 0.18s ease,box-shadow 0.18s ease}
+.tier:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+.tier.popular{border-color:#38b2ac;border-width:2px;padding:31px 23px}
+.pop-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#38b2ac;color:#fff;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+.tier-name{font-size:18px;margin:0 0 8px;color:#2d3748;font-family:'Poppins',sans-serif}
+.tier-price{font-size:36px;font-weight:700;margin-bottom:4px;display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;font-family:'Poppins',sans-serif}
+.tier-cadence{font-size:13px;color:#718096;font-weight:400}
+.tier-subtitle{color:#718096;font-size:14px;margin:0 0 18px}
+.tier-features{list-style:none;padding:0;margin:0 0 24px;flex:1}
+.tier-features li{padding:7px 0 7px 22px;position:relative;font-size:14px;color:#2d3748;line-height:1.45}
+.tier-features li::before{content:"✓";position:absolute;left:0;color:#38b2ac;font-weight:700}
+.tier-cta{display:block;text-align:center;background:#1a202c;color:#fff;padding:13px 20px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px;transition:opacity 0.2s}
+.tier.popular .tier-cta{background:#38b2ac}
+.tier-cta:hover{opacity:0.88}
+.order-bump{background:#fffaf0;border:2px dashed #ed8936;border-radius:10px;padding:1.5rem;margin:2rem auto;max-width:780px;text-align:center}
+.order-bump h4{color:#c05621;font-size:1.1rem;margin-bottom:0.5rem;font-family:'Poppins',sans-serif}
+.order-bump p{color:#744210;font-size:0.95rem;margin-bottom:0.8rem}
+.order-bump a{display:inline-block;padding:0.6rem 1.2rem;background:#ed8936;color:#fff;text-decoration:none;border-radius:6px;font-weight:600;font-size:0.92rem}
+.guarantee{background:#ebf8ff;border:1px solid #90cdf4;border-radius:10px;padding:1.5rem;max-width:780px;margin:2rem auto;display:flex;gap:1rem;align-items:flex-start}
+.guarantee .badge{font-size:2rem;flex-shrink:0}
+.guarantee h4{color:#2c5282;margin-bottom:0.3rem;font-size:1.05rem;font-family:'Poppins',sans-serif}
+.guarantee p{color:#2a4365;font-size:0.92rem}
+.trust{text-align:center;margin:2rem 0;color:#718096;font-size:0.85rem}
+.trust span{margin:0 0.6rem}
+.footer{text-align:center;color:#a0aec0;font-size:0.78rem;margin-top:3rem;padding-top:2rem;border-top:1px solid #e2e8f0}
+.footer a{color:#718096;margin:0 0.5rem;text-decoration:none}
+.footer a:hover{color:#4a5568}
+nav.nav{display:flex;gap:0.6rem;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap}
+nav.nav a{color:#4a5568;font-size:0.9rem;text-decoration:none;padding:0.3rem 0.7rem;border-radius:6px;border:1px solid #e2e8f0}
+nav.nav a:hover{border-color:#38b2ac;color:#38b2ac}
+</style>
 </head>
-<body data-business-id="b1">
-  <header class="site-header">
-    <div class="container">
-      <a href="./index.html" class="logo"><span>A</span>I Growth Toolkit</a>
-      <nav class="nav-links">
+<body>
+<div class="wrap">
+  <div class="brand"><a href="./index.html">GrowthKit HQ</a></div>
+  <nav class="nav">
     <a href="./index.html">Home</a>
-    <a href="./offer.html">Services</a>
-    <a href="./checkout.html" class="active">Get Started</a>
-      </nav>
-    </div>
-  </header>
-  <section class="hero-section">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">Secure Checkout</div>
-        <h1>Complete Your Purchase</h1>
-        <p>Select a plan below to proceed. All transactions are processed securely through Stripe.</p>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Choose Your Plan</h2>
-      <div class="offers-grid" id="checkout-tiers">
-        <div class="offer-card" data-business="b1" data-tier="0" data-price="3700">
-          <h3>Starter Toolkit</h3>
-          <div class="offer-price">$37</div>
-          <p>Essential prompts, SOPs, and a step-by-step launch checklist to get your first offer live.</p>
-          <ul>
-          <li>50+ AI prompts for content &amp; copy</li>
-          <li>Operator SOP templates</li>
-          <li>Launch-day checklist</li>
-          <li>Email sequence templates</li>
-          </ul>
-          <button class="btn btn-primary buy-btn" data-tier="0" style="width:100%;cursor:pointer;">Buy Now</button>
-        </div>
-        <div class="offer-card featured" data-business="b1" data-tier="1" data-price="6700">
-          <h3>Complete Toolkit</h3>
-          <div class="offer-price">$67</div>
-          <p>Everything in Starter plus full funnel templates, automation blueprints, and a swipe file vault.</p>
-          <ul>
-          <li>Everything in Starter</li>
-          <li>Funnel page templates</li>
-          <li>Automation workflow blueprints</li>
-          <li>Landing page swipe files</li>
-          <li>Content calendar system</li>
-          </ul>
-          <button class="btn btn-primary buy-btn" data-tier="1" style="width:100%;cursor:pointer;">Buy Now</button>
-        </div>
-        <div class="offer-card" data-business="b1" data-tier="2" data-price="19700">
-          <h3>Implementation Support</h3>
-          <div class="offer-price">From $197</div>
-          <p>1-on-1 implementation review after purchasing the toolkit. We walk through your setup and optimize.</p>
-          <ul>
-          <li>90-minute strategy session</li>
-          <li>Setup audit &amp; recommendations</li>
-          <li>Custom prompt tuning</li>
-          <li>30-day email support</li>
-          </ul>
-          <button class="btn btn-primary buy-btn" data-tier="2" style="width:100%;cursor:pointer;">Buy Now</button>
-        </div>
-      </div>
-    </div>
-  </section>
+    <a href="./offer.html">Offer</a>
+    <a href="./checkout.html">Checkout</a>
+    <a href="./thank-you.html">Thank You</a>
+  </nav>
+  <h1 class="head">Choose your tier</h1>
+  <p class="subtitle">Secure Stripe checkout. 14-day money-back guarantee. No subscriptions, no surprise charges.</p>
 
-  <div id="checkout-status" style="display:none;" class="section">
-    <div class="container">
-      <p id="checkout-message" style="text-align:center;font-weight:600;">Processing...</p>
+  <div class="pricing-grid">
+    <div class="tier">
+      <h3 class="tier-name">Starter</h3>
+      <div class="tier-price">$17<span class="tier-cadence">one-time</span></div>
+      <p class="tier-subtitle">The fastest taste of the toolkit</p>
+      <ul class="tier-features">
+        <li>Core AI Growth Toolkit essentials</li>
+        <li>10 top-rated prompts</li>
+        <li>2 Notion templates</li>
+        <li>Quick-start PDF guide</li>
+        <li>Lifetime updates</li>
+        <li>Email-only support</li>
+      </ul>
+      <a href="https://buy.stripe.com/00w14o8MXcv0b1K6MS2881P" class="tier-cta">Choose Starter — $17</a>
+    </div>
+
+    <div class="tier popular">
+      <div class="pop-badge">Most Popular</div>
+      <h3 class="tier-name">Growth Bundle</h3>
+      <div class="tier-price">$67<span class="tier-cadence">one-time</span></div>
+      <p class="tier-subtitle">What 80% of operators choose</p>
+      <ul class="tier-features">
+        <li>100+ advanced prompts</li>
+        <li>15 professional templates</li>
+        <li>10 standard operating procedures</li>
+        <li>Automation blueprints</li>
+        <li>Lifetime updates</li>
+        <li>Priority email support</li>
+      </ul>
+      <a href="https://buy.stripe.com/14AbJ29R10Mib1K8V02881R" class="tier-cta">Get Growth Bundle — $67</a>
+    </div>
+
+    <div class="tier">
+      <h3 class="tier-name">Pro Bundle</h3>
+      <div class="tier-price">$97<span class="tier-cadence">one-time</span></div>
+      <p class="tier-subtitle">All-access for serious operators</p>
+      <ul class="tier-features">
+        <li>Everything in Growth Bundle</li>
+        <li>Private operator community</li>
+        <li>Monthly new prompt drops</li>
+        <li>Bonus automation workflows</li>
+        <li>Monthly group calls</li>
+        <li>Priority email support</li>
+      </ul>
+      <a href="https://buy.stripe.com/14AfZi7IT1Qm8TC0ou2881T" class="tier-cta">Go Pro — $97</a>
     </div>
   </div>
 
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Purchase Information</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Secure Payment</h3>
-          <p>All transactions processed through Stripe (PCI-DSS Level 1 compliant). Your card details never touch our servers.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Instant Access</h3>
-          <p>Digital products are delivered instantly after payment. Service engagements begin within 24 hours.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Satisfaction Guarantee</h3>
-          <p>14-day refund policy on digital products. Contact <a href="mailto:support@growthkithq.com">support@growthkithq.com</a> for support.</p>
-        </div>
-      </div>
+  <div class="order-bump">
+    <h4>Add-On: Notion AI Workspace Pack (+$27)</h4>
+    <p>Drop-in Notion workspace with AI command-center, prompt library, content pipeline, and weekly review templates.</p>
+    <a href="https://buy.stripe.com/14A14obZ9fHc4Dm5IO2881S">Add Notion Pack — $27 →</a>
+  </div>
+
+  <div class="guarantee">
+    <div class="badge">🛡️</div>
+    <div>
+      <h4>14-Day Money-Back Guarantee</h4>
+      <p>Try AI Growth Toolkit for two full weeks. If it doesn't deliver, email <a href="mailto:growthkit@asiinnovativesolutions.com" style="color:#2c5282">growthkit@asiinnovativesolutions.com</a> with your order number and we'll refund every cent.</p>
     </div>
-  </section>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <p>&copy; 2026 AI Growth Toolkit. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="mailto:support@growthkithq.com">Contact</a>
-          <a href="./offer.html">Services</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script>
-  (function(){
-    'use strict';
-    var API_BASE=window.ASI_API_BASE||'';
-    var BUSINESS_ID='b1';
-    var TIERS=[{"name": "Starter Toolkit", "price_cents": 3700, "price_display": "$37"}, {"name": "Complete Toolkit", "price_cents": 6700, "price_display": "$67"}, {"name": "Implementation Support", "price_cents": 19700, "price_display": "From $197"}];
-    document.querySelectorAll('.buy-btn').forEach(function(btn){
-      btn.addEventListener('click',function(){
-        var tier=parseInt(this.dataset.tier,10);
-        var info=TIERS[tier];
-        if(!info)return;
-        var statusEl=document.getElementById('checkout-status');
-        var msgEl=document.getElementById('checkout-message');
-        statusEl.style.display='block';
-        msgEl.textContent='Redirecting to secure checkout...';
-        if(!API_BASE){msgEl.textContent='Checkout is being configured. Please contact '+'support@growthkithq.com'+' to complete your purchase.';return;}
-        fetch(API_BASE+'/stripe/create-checkout-session',{
-          method:'POST',headers:{'Content-Type':'application/json'},
-          body:JSON.stringify({business_id:BUSINESS_ID,tier:tier,product_name:info.name,amount:info.price_cents})
-        }).then(function(r){return r.json();}).then(function(d){
-          if(d.url)window.location.href=d.url;else msgEl.textContent=d.error||'Checkout unavailable. Contact support.';
-        }).catch(function(){msgEl.textContent='Checkout unavailable. Please contact support.';});
-      });
-    });
-  })();
-  </script>
-  <script>
-  (function(){
-    var bid='b1',page=location.pathname.split('/').pop()||'index.html';
-    var key='asi_pv_'+bid;
-    try{var d=JSON.parse(localStorage.getItem(key)||'{}');d[page]=(d[page]||0)+1;d._total=(d._total||0)+1;d._last=new Date().toISOString();d._ref=document.referrer||'direct';localStorage.setItem(key,JSON.stringify(d));}catch(e){}
-    if(window.ASI_ANALYTICS_URL){try{navigator.sendBeacon(window.ASI_ANALYTICS_URL,JSON.stringify({business_id:bid,page:page,referrer:document.referrer||'direct',timestamp:new Date().toISOString(),ua:navigator.userAgent}));}catch(e){}}
-  })();
-  </script>
+  </div>
+
+  <div class="trust">
+    <span>🔒 SSL secured</span> · <span>💳 Stripe-protected</span> · <span>✓ ASI Innovative Solutions LLC</span>
+  </div>
+
+  <div class="footer">
+    <a href="./index.html">Home</a> ·
+    <a href="./offer.html">Offer Details</a> ·
+    <a href="mailto:growthkit@asiinnovativesolutions.com">Contact</a>
+    <br><br>
+    © 2026 ASI Innovative Solutions LLC · Florida LLC · EIN 41-3542136
+  </div>
+</div>
 </body>
 </html>
